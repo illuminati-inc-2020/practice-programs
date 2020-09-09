@@ -1,0 +1,12 @@
+
+#if !defined(AFX_SDL_H__3A640647_A7D8_49A8_9CB6_948AC937C20B__INCLUDED_)
+#define AFX_SDL_H__3A640647_A7D8_49A8_9CB6_948AC937C20B__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+#include "resource.h"
+
+
+#endif // !defined(AFX_SDL_H__3A640647_A7D8_49A8_9CB6_948AC937C20B__INCLUDED_)

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="StickyNote.exe" version="1.0.0.0" publicKeyToken="1bae1e97a119b9bf" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="StickyNote" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="StickyNote.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="StickyNote.exe" size="27648">
+      <assemblyIdentity name="StickyNote" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>eq7tMklhBtmEGnLS1/U9RBD1prs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=Rakesh-PC\Rakesh" issuerKeyHash="f7472fb480d8461e1a9bd21256508b93b693e014" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>KOyPkLiVPLS3M7MX0AVvblSkwU4=</DigestValue></Reference></SignedInfo><SignatureValue>KS9mTEuAS98CogqcfqkNViesRP3HM6rfH+EhYxLnIeJZTO1/KrlWALJVlQKkcX/cwYrFNllQ0OMZJphBYTRjHgi9hflixa10ORRvo7mVZcUITQSDaJKKTQCNUcQitTY+KowwuD/BTxq6XRytD0zaYkuY7o0MYcV5v1641+NXOnE=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tkQBOz3cy2LWNoa5q2iBUFplvLGP55cvhinAXSCSoOSIXp5JaO/FOK1XYkxPFWnrum5CrErgce/g07qlM+40kvjNfOy69ExQ16sQfTBnAbAmHRintVIo/+BMqvsVtYNs/7IdrJMx5Dg40hPuAmqsiD3h54qKPlCEHC4Su1fM4H8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="4ec1a4546e6f05d017b333b7b43c95b8908fec28" Description="" Url=""><as:assemblyIdentity name="StickyNote.exe" version="1.0.0.0" publicKeyToken="1bae1e97a119b9bf" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=Rakesh-PC\Rakesh</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>gjYsIAbgxOHrWkqJvgLtiuS9z0o=</DigestValue></Reference></SignedInfo><SignatureValue>SVHHw7cq9dEuaz54vqrGa0UwM5aoK/9J/ZtzTah1dj26GD/go+LjFD/DbZVWlkUMT/f/m2A3btPBODSbPhG0Pa9Wd95p4xKvT3cCXFhRIAZmHurALGDRMKCcgamat/7hvslgp6LEpsWkYih71KpbjmF8sbAxqzclrEFtUHtgADE=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tkQBOz3cy2LWNoa5q2iBUFplvLGP55cvhinAXSCSoOSIXp5JaO/FOK1XYkxPFWnrum5CrErgce/g07qlM+40kvjNfOy69ExQ16sQfTBnAbAmHRintVIo/+BMqvsVtYNs/7IdrJMx5Dg40hPuAmqsiD3h54qKPlCEHC4Su1fM4H8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQP6mzRkbPuINF9Jab+MnGWTANBgkqhkiG9w0BAQUFADArMSkwJwYDVQQDHiAAUgBhAGsAZQBzAGgALQBQAEMAXABSAGEAawBlAHMAaDAeFw0xMjExMDgxMDI3MTdaFw0xMzExMDgxNjI3MTdaMCsxKTAnBgNVBAMeIABSAGEAawBlAHMAaAAtAFAAQwBcAFIAYQBrAGUAcwBoMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2RAE7PdzLYtY2hrmraIFQWmW8sY/nly+GKcBdIJKg5Ihenklo78U4rVdiTE8Vaeu6bkKsSuBx7+DTuqUz7jSS+M187Lr0TFDXqxB9MGcBsCYdGKe1Uij/4Eyq+xW1g2z/sh2skzHkODjSE+4CaqyIPeHnioo+UIQcLhK7V8zgfwIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAF+Gs/c+vCvRLcLZ98FeID6CYFGdLNqbvC3YHkBGsaonjTGrHQJE13dOdq/oq8AGjS+jd/Jg8yHamI0zVtt/K/+Fg+K0t0gLADJf0FUXA+U2HcEj72K2PTDeZkw8dZ7YhKsSXWPB0Tf8GVtl0Z9h+krRPvdBFlZorWw60IlBgzNO</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

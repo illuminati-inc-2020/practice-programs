@@ -1,0 +1,8 @@
+	LDA 00A0H
+	MOV B,A
+	STC
+	CMC
+	RAR
+	XRA B
+	STA 00B0H
+	HLT

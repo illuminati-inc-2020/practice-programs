@@ -1,0 +1,15 @@
+0001   0000 3A A0 00    	LDA 00A0H
+0002   0003 4F          	MOV C,A		;C=Number of data
+0003   0004 3A A1 00    	LDA 00A1H	;A=Data
+0004   0007 16 00       	MVI D,00H	;D=Frequency
+0005   0009 21 B0 00    	LXI H,00B0H
+0006   000C BE          LOOP:	CMP M
+0007   000D C2 11 00    	JNZ ENDIF
+0008   0010 14          	INR D
+0009   0011 23          ENDIF:	INX H
+0010   0012 0D          	DCR C
+0011   0013 C2 0C 00    	JNZ LOOP
+0012   0016 7A          	MOV A,D
+0013   0017 32 A2 00    	STA 00A2H
+0014   001A 76          	HLT
+Number of errors = 0

@@ -1,0 +1,5 @@
+Run-Time error '438': Object doesn't support this property or method 
+CAUSE: PictureBox.Picture = LoadPicture("D:\My Codes\VB\DB\Clock.bmp")
+REMEDY: 
+
+

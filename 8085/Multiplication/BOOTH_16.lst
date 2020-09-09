@@ -1,0 +1,36 @@
+0001   0000             ;Multiplication of 2 2byte numbers using repeatative addition
+0002   0000             ;Input		: 00A0H, 00A1H <- Multiplier
+0003   0000             ;		: 00B0H, 00B1H <- Multiplicand
+0004   0000             ;Output		: 00C0H, 00C1H, 00C2H, 00C3H <- Product
+0005   0000 2A A0 00    	LHLD 00A0H
+0006   0003 F9          	SPHL		;SP <- multiplier
+0007   0004 2A B0 00    	LHLD 00B0H
+0008   0007 54          	MOV D, H
+0009   0008 5D          	MOV E, L	;DE <- multiplicand
+0010   0009 26 00       	MVI H, 00H
+0011   000B 6C          	MOV L, H	;HLDE <- product
+0012   000C 0E 10       	MVI C, 10H	;C <- counter
+0013   000E 7B          LOOP:	MOV A, E
+0014   000F E6 01       	ANI 01H
+0015   0011 CA 15 00    	JZ SHIFT
+0016   0014 39          	DAD SP
+0017   0015 7C          SHIFT:	MOV A, H
+0018   0016 1F          	RAR
+0019   0017 67          	MOV H, A
+0020   0018 7D          	MOV A, L
+0021   0019 1F          	RAR
+0022   001A 6F          	MOV L, A
+0023   001B 7A          	MOV A, D
+0024   001C 1F          	RAR
+0025   001D 57          	MOV D, A
+0026   001E 7B          	MOV A, E
+0027   001F 1F          	RAR
+0028   0020 5F          	MOV E, A
+0029   0021 0D          	DCR C
+0030   0022 C2 0E 00    	JNZ LOOP
+0031   0025 22 C2 00    	SHLD 00C2H
+0032   0028 62          	MOV H, D
+0033   0029 6B          	MOV L, E
+0034   002A 22 C0 00    	SHLD 00C0H
+0035   002D 76          	HLT
+Number of errors = 0

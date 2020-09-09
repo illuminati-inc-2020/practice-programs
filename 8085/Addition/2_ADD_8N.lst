@@ -1,0 +1,31 @@
+0001   0000             ;Add 2 N byte numbers
+0002   0000             ;Input	: 00A0H <- N
+0003   0000             ;	: 00B0H <- first number
+0004   0000             ;	: 00C0H <- second number
+0005   0000             ;Output : 00D0h <- sum
+0006   0000 3A A0 00    	LDA 00A0H
+0007   0003 4F          	MOV C, A
+0008   0004 31 FF FF    	LXI SP, 0FFFFH
+0009   0007 21 D0 00    	LXI H, 00D0H
+0010   000A E5          	PUSH H
+0011   000B 21 B0 00    	LXI H, 00B0H
+0012   000E 11 C0 00    	LXI D, 00C0H
+0013   0011 97          	SUB A
+0014   0012 1F          LOOP:	RAR
+0015   0013 7E          	MOV A, M
+0016   0014 23          	INX H
+0017   0015 EB          	XCHG
+0018   0016 8E          	ADC M
+0019   0017 23          	INX H
+0020   0018 E3          	XTHL
+0021   0019 77          	MOV M, A
+0022   001A 23          	INX H
+0023   001B E3          	XTHL
+0024   001C 17          	RAL
+0025   001D 0D          	DCR C
+0026   001E C2 12 00    	JNZ LOOP
+0027   0021 E3          	XTHL
+0028   0022 E6 01       	ANI 01H
+0029   0024 77          	MOV M, A
+0030   0025 76          	HLT
+Number of errors = 0

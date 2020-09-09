@@ -1,0 +1,24 @@
+0001   0000 0E 01       	MVI C,01H
+0002   0002 CD 06 00    	CALL DELAY
+0003   0005 76          	HLT
+0004   0006             
+0005   0006             
+0006   0006             ; Delay Subroutine
+0007   0006             ; Create delays in second for 3MHz microprocessor
+0008   0006             ; Input from register C
+0009   0006             ; Destroys A,C,H,L
+0010   0006 21 24 14    DELAY:	LXI H,01424H
+0011   0009 00          LOOP:	NOP
+0012   000A 00          	NOP
+0013   000B 00          	NOP
+0014   000C 00          	NOP
+0015   000D 00          	NOP
+0016   000E 00          	NOP
+0017   000F 2B          	DCX H
+0018   0010 7C          	MOV A,H
+0019   0011 B5          	ORA L
+0020   0012 C2 09 00    	JNZ LOOP
+0021   0015 0D          	DCR C
+0022   0016 C2 06 00    	JNZ DELAY
+0023   0019 C9          	RET
+Number of errors = 0

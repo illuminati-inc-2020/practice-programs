@@ -1,0 +1,75 @@
+0001   0000             ;LCM OF N NUMBERS
+0002   0000             ;INPUT			: 00A0H <- NUMBER OF DATA
+0003   0000             ;			  00A1H <- LIST BASE ADDRESS
+0004   0000             ;OUTPUT			: 00B0H <- LCM
+0005   0000 21 A0 00    		LXI H, 00A0H
+0006   0003 35          		DCR M
+0007   0004 23          		INX H
+0008   0005 56          		MOV D, M
+0009   0006 23          LOOP:		INX H
+0010   0007 42          		MOV B, D
+0011   0008 4E          		MOV C, M
+0012   0009 CD 26 00    		CALL MUL
+0013   000C 58          		MOV E, B
+0014   000D 42          		MOV B, D
+0015   000E 4E          		MOV C, M
+0016   000F CD 2E 00    		CALL GCD
+0017   0012 4B          		MOV C, E
+0018   0013 CD 42 00    		CALL DIV
+0019   0016 51          		MOV D, C
+0020   0017 3A A0 00    		LDA 00A0H
+0021   001A 3D          		DCR A
+0022   001B 32 A0 00    		STA 00A0H
+0023   001E C2 06 00    		JNZ LOOP
+0024   0021 7A          		MOV A, D
+0025   0022 32 B0 00    		STA 00B0H
+0026   0025 76          		HLT
+0027   0026             		
+0028   0026             ;SUBROUTINE FOR MULTIPLICATION OF 2 NUMBERS
+0029   0026             ;INPUT			: B <- MULTIPLIER
+0030   0026             ;			  C <- MULTIPLICAND
+0031   0026             ;OUTPUT			: B <- PRODUCT
+0032   0026             ;REGISTERS AFFECTED	: A, B, C
+0033   0026 97          MUL:		SUB A
+0034   0027 80          MUL_LOOP:	ADD B
+0035   0028 0D          		DCR C
+0036   0029 C2 27 00    		JNZ MUL_LOOP
+0037   002C 47          		MOV B, A
+0038   002D C9          		RET
+0039   002E             
+0040   002E             ;SUBROUTINE FOR GCD OF 2 NUMBERS
+0041   002E             ;INPUT			: B, C <- NUMBERS
+0042   002E             ;OUTPUT			: B <- GCD
+0043   002E             ;REGISTERS AFFECTED	: A, B, C
+0044   002E 78          GCD:		MOV A, B
+0045   002F B9          		CMP C 
+0046   0030 DA 38 00    		JC GCD_ELSE
+0047   0033 91          		SUB C
+0048   0034 47          		MOV B, A
+0049   0035 C3 3B 00    		JMP GCD_ENDIF
+0050   0038 79          GCD_ELSE:	MOV A, C
+0051   0039 90          		SUB B
+0052   003A 4F          		MOV C, A
+0053   003B 78          GCD_ENDIF:	MOV A, B
+0054   003C B9          		CMP C
+0055   003D C2 2E 00    		JNZ GCD
+0056   0040 47          		MOV B,A
+0057   0041 C9          		RET
+0058   0042             
+0059   0042             ;SUBROUTINE FOR DIVISION OF 2 NUMBERS
+0060   0042             ;INPUT  		: B <- DIVIDER
+0061   0042             ;			  C <- DIVIDEND
+0062   0042             ;OUTPUT			: B <- REMAINDER
+0063   0042             ;			  C <- QUOTIENT
+0064   0042             ;REGISTERS AFFECTED	: A, B, C
+0065   0042 79          DIV:		MOV A,C
+0066   0043 0E 00       		MVI C,00H
+0067   0045 B8          DIV_LOOP:	CMP B
+0068   0046 DA 4E 00    		JC DIV_END
+0069   0049 90          		SUB B
+0070   004A 0C          		INR C
+0071   004B C3 45 00    		JMP DIV_LOOP
+0072   004E 47          DIV_END:	MOV B,A
+0073   004F C9          		RET
+0074   0050             
+Number of errors = 0

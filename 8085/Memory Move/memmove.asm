@@ -1,0 +1,19 @@
+	LDA 00A0H
+	MOV C,A		;C=Number of data
+	LXI D,00B0H	;DE=Input address
+	LXI H,00B5H	;HL=Output address
+	MVI B,00H
+	DCR C
+	DAD B
+	XCHG
+	DAD B
+	INR C
+LOOP:	MOV A,M
+	XCHG
+	MOV M,A
+	XCHG
+	DCX H
+	DCX D
+	DCR C
+	JNZ LOOP
+	HLT

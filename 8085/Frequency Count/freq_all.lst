@@ -1,0 +1,40 @@
+0001   0000 3A A0 00    	LDA 00A0H
+0002   0003 47          	MOV B,A		;B=Number of data
+0003   0004 31 FF FF    	LXI SP,0FFFFH
+0004   0007 21 C0 00    	LXI H,00C0H
+0005   000A E5          	PUSH H		;Stack Top=Output address=00C0H
+0006   000B 3E 00       	MVI A,00H	;A=Data
+0007   000D 21 B0 00    LOOP1:	LXI H,00B0H	;HL=Input address=00B0H
+0008   0010 48          	MOV C,B		;C=Counter
+0009   0011 CD 27 00    	CALL FREQ
+0010   0014 5F          	MOV E,A		;E=Temp for data
+0011   0015 7A          	MOV A,D
+0012   0016 FE 00       	CPI 00H
+0013   0018 CA 21 00    	JZ FREQ0
+0014   001B E3          	XTHL
+0015   001C 73          	MOV M,E
+0016   001D 23          	INX H
+0017   001E 72          	MOV M,D
+0018   001F 23          	INX H
+0019   0020 E3          	XTHL
+0020   0021 7B          FREQ0:	MOV A,E
+0021   0022 3D          	DCR A
+0022   0023 C2 0D 00    	JNZ LOOP1
+0023   0026 76          	HLT
+0024   0027             
+0025   0027             ;FREQUENCY SUBROUTINE
+0026   0027             ;A,C,D,H,L Registers affected
+0027   0027             ;Input	:	C=Number of data
+0028   0027             ;		A=Data
+0029   0027             ;		HL=Base address of list
+0030   0027             ;Output	:	D=Frequency
+0031   0027             
+0032   0027 16 00       FREQ:		MVI D,00H
+0033   0029 BE          FREQ_LOOP:	CMP M
+0034   002A C2 2E 00    		JNZ FREQ_ENDIF
+0035   002D 14          		INR D
+0036   002E 23          FREQ_ENDIF:	INX H
+0037   002F 0D          		DCR C
+0038   0030 C2 29 00    		JNZ FREQ_LOOP
+0039   0033 C9          		RET
+Number of errors = 0

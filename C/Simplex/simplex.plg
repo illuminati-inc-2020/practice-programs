@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: simplex - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Malik\LOCALS~1\Temp\RSP165.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/simplex.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\My Documents\My Programs\Simplex\simplex.C"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Malik\LOCALS~1\Temp\RSP165.tmp" 
+Creating temporary file "C:\DOCUME~1\Malik\LOCALS~1\Temp\RSP166.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/simplex.pdb" /debug /machine:I386 /out:"Debug/simplex.exe" /pdbtype:sept 
+".\Debug\simplex.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Malik\LOCALS~1\Temp\RSP166.tmp"
+<h3>Output Window</h3>
+Compiling...
+simplex.C
+D:\My Documents\My Programs\Simplex\simplex.C(35) : warning C4013: 'MessageBox' undefined; assuming extern returning int
+D:\My Documents\My Programs\Simplex\simplex.C(35) : error C2065: 'MB_ICONWARNING' : undeclared identifier
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+simplex.exe - 1 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

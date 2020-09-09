@@ -1,0 +1,14 @@
+0001   0000 3A A0 00    	LDA 00A0H
+0002   0003 47          	MOV B, A
+0003   0004 0E 08       	MVI C, 08H
+0004   0006 21 B0 00    	LXI H, 00B0H
+0005   0009 E6 01       LOOP:	ANI 01H
+0006   000B 77          	MOV M, A
+0007   000C 23          	INX H
+0008   000D 78          	MOV A, B
+0009   000E 1F          	RAR
+0010   000F 47          	MOV B, A
+0011   0010 0D          	DCR C
+0012   0011 C2 09 00    	JNZ LOOP
+0013   0014 76          	HLT
+Number of errors = 0

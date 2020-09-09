@@ -1,0 +1,9 @@
+0001   0000 3A A0 00    	LDA 00A0H
+0002   0003 47          	MOV B,A
+0003   0004 37          	STC
+0004   0005 3F          	CMC
+0005   0006 1F          	RAR
+0006   0007 A8          	XRA B
+0007   0008 32 B0 00    	STA 00B0H
+0008   000B 76          	HLT
+Number of errors = 0

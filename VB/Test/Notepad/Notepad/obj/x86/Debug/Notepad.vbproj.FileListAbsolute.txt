@@ -1,0 +1,14 @@
+D:\My Codes\VB\Notepad\Notepad\bin\Debug\Notepad.exe
+D:\My Codes\VB\Notepad\Notepad\bin\Debug\Notepad.pdb
+D:\My Codes\VB\Notepad\Notepad\bin\Debug\Notepad.xml
+D:\My Codes\VB\Notepad\Notepad\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\My Codes\VB\Notepad\Notepad\obj\x86\Debug\Notepad.Resources.resources
+D:\My Codes\VB\Notepad\Notepad\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\My Codes\VB\Notepad\Notepad\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\My Codes\VB\Notepad\Notepad\obj\x86\Debug\Notepad.exe
+D:\My Codes\VB\Notepad\Notepad\obj\x86\Debug\Notepad.xml
+D:\My Codes\VB\Notepad\Notepad\obj\x86\Debug\Notepad.pdb
+D:\My Codes\VB\Notepad\Notepad\obj\x86\Debug\Notepad.window.resources
+D:\My Codes\VB\Test\Notepad\Notepad\obj\x86\Debug\Notepad.exe
+D:\My Codes\VB\Test\Notepad\Notepad\obj\x86\Debug\Notepad.xml
+D:\My Codes\VB\Test\Notepad\Notepad\obj\x86\Debug\Notepad.pdb

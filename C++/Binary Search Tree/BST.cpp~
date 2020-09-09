@@ -1,0 +1,140 @@
+#include <iostream>
+
+using namespace std;
+
+template <class DT> class Node {
+public:
+	DT data;
+	Node<DT> *left, *right;
+	Node(DT, Node<DT>*, Node<DT>*);
+};
+template <class DT> Node<DT>::Node(DT data, Node<DT> *left=NULL, Node<DT> *right=NULL) {
+	Node::data=data;
+	Node::left=left;
+	Node::right=right;
+}
+template <class DT> void traverseInorder(Node<DT> **t) {
+	if(*t!=NULL) {
+		traverseInorder(&(*t)->left);
+		cout<<(*t)->data<<" ";
+		traverseInorder(&(*t)->right);
+	}
+}
+template <class DT> void traversePostorder(Node<DT> **t) {
+	if(*t!=NULL) {
+		traversePostorder(&(*t)->left);
+		traversePostorder(&(*t)->right);
+		cout<<(*t)->data<<" ";
+	}
+}
+template <class DT> void traversePreorder(Node<DT> **t) {
+	if(*t!=NULL) {
+		cout<<(*t)->data<<" ";
+		traversePreorder(&(*t)->left);
+		traversePreorder(&(*t)->right);
+	}
+}
+template <class DT> void clear(Node<DT> **t) {
+	if(*t!=NULL) {
+		clear(&(*t)->left);
+		clear(&(*t)->right);
+		delete *t;
+	}
+}
+template <class DT> void copyTree(Node<DT> **t2, Node<DT> **t1) {
+	if(*t1!=NULL) {
+		*t2=new Node<DT>((*t1)->data);
+		copyTree(&(*t2)->left, &(*t2)->left);
+		copyTree(&(*t2)->right, &(*t2)->right);
+	}
+}
+
+template <class DT> class BST {
+	Node<DT> **head;
+public:
+	BST();
+	BST(const BST&);
+	~BST();
+	void insert(DT);
+	void remove(DT);
+	void traverseInorder();
+	void traversePreorder();
+	void traversePostorder();
+};
+template <class DT> BST<DT>::BST() {
+	head=new Node<DT>*;
+	*head=NULL;
+}
+template <class DT> BST<DT>::BST(const BST &b) {
+	BST::head=new Node<DT>*;
+	copyTree(BST::head, b.head);
+}
+template <class DT> BST<DT>::~BST() {
+	clear(BST::head);
+	delete head;
+}
+template <class DT> void BST<DT>::insert(DT data) {
+	Node<DT> **temp=BST::head;
+	while(*temp!=NULL) {
+		if(data < (*temp)->data)
+			temp=&(*temp)->left;
+		else if(data > (*temp)->data)
+			temp=&(*temp)->right;
+		else 
+			return;
+	}
+	*temp=new Node<DT>(data);
+}
+template <class DT> void BST<DT>::remove(DT data) {
+	Node<DT> **temp=BST::head;
+	while(*temp!=NULL) {
+		if(data < (*temp)->data)
+			temp=&(*temp)->left;
+		else if(data > (*temp)->data)
+			temp=&(*temp)->right;
+		else {
+			Node<DT> *oldnode=*temp;
+			Node<DT> *left=(*temp)->left;
+			*temp=(*temp)->right;
+			while(*temp!=NULL)
+				temp=&(*temp)->left;
+			*temp=left;
+			delete oldnode;
+			return;
+		}
+	}
+}
+template <class DT> void BST<DT>::traverseInorder() {
+	::traverseInorder(BST::head);
+	cout<<endl;
+}
+template <class DT> void BST<DT>::traversePostorder() {
+	::traversePostorder(BST::head);
+	cout<<endl;
+}
+template <class DT> void BST<DT>::traversePreorder() {
+	::traversePreorder(BST::head);
+	cout<<endl;
+}
+
+main() {
+	BST<double> t;
+	t.insert(5);
+	t.insert(1);
+	t.insert(2);
+	t.insert(7);
+	t.insert(3);
+	t.insert(4);
+	t.traverseInorder();
+	t.traversePreorder();
+	t.traversePostorder();
+	cout<<endl;
+	t.remove(2);
+	t.remove(5);
+	t.traverseInorder();
+	t.traversePreorder();
+	t.traversePostorder();
+	BST<double> t2=t;
+	t.insert(10);
+	t.traverseInorder();
+}

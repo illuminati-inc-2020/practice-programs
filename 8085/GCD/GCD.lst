@@ -1,0 +1,22 @@
+0001   0000             ;GCD OF 2 NUMBERS
+0002   0000             ;INPUT	: 00A0H, 00A1H
+0003   0000             ;OUTPUT	: 00BOH
+0004   0000 21 A0 00    	LXI H, 00A0H
+0005   0003 46          	MOV B, M
+0006   0004 23          	INX H
+0007   0005 4E          	MOV C, M
+0008   0006 78          LOOP:	MOV A, B
+0009   0007 B9          	CMP C 
+0010   0008 DA 10 00    	JC ELSE
+0011   000B 91          	SUB C
+0012   000C 47          	MOV B, A
+0013   000D C3 13 00    	JMP ENDIF
+0014   0010 79          ELSE:	MOV A, C
+0015   0011 90          	SUB B
+0016   0012 4F          	MOV C, A
+0017   0013 78          ENDIF:	MOV A, B
+0018   0014 B9          	CMP C
+0019   0015 C2 06 00    	JNZ LOOP
+0020   0018 32 B0 00    	STA 00B0H
+0021   001B 76          	HLT
+Number of errors = 0

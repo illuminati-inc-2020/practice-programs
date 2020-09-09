@@ -1,0 +1,14 @@
+0001   0000 21 00 01    	LXI H,0100H	;0100H<-INPUT
+0002   0003 4E          	MOV C,M		;C<-COUNTER
+0003   0004 23          	INX H
+0004   0005 11 00 02    	LXI D,0200H	;0200H<-OUTPUT
+0005   0008 7E          LOOP:	MOV A,M
+0006   0009 EB          	XCHG
+0007   000A 77          	MOV M,A
+0008   000B EB          	XCHG
+0009   000C 23          	INX H
+0010   000D 13          	INX D
+0011   000E 0D          	DCR C
+0012   000F C2 08 00    	JNZ LOOP
+0013   0012 76          	HLT
+Number of errors = 0

@@ -1,0 +1,13 @@
+	LXI H,00A0H
+	MOV A,M
+	ADD A
+	MOV B,A
+	ADD A
+	ADD A
+	ADD B
+	INX H
+	ADD H
+	ADD M
+	INX H
+	MOV M,A
+	HLT

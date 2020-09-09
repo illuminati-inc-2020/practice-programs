@@ -1,0 +1,25 @@
+Knapsack(n, v1...vn, w1...wn, W)
+{
+	for i=1 to n
+	{
+		xi=0.0
+		ri=vi/wi
+	}
+	sort r, v, w according to r in descending order
+	V=0
+	for i=1 to n
+	{
+		if(wi<=W) {
+			xi=1.0
+			W=W-wi
+			V=V+vi
+		}
+		else
+		{
+			xi=wi/W
+			V=V+vi*wi/W
+			break loop
+		}
+	}
+	return (x, V)
+}

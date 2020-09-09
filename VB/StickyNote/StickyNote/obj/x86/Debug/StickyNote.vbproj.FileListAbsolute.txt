@@ -1,0 +1,28 @@
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\bin\Debug\StickyNote.exe
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\bin\Debug\StickyNote.pdb
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\bin\Debug\StickyNote.xml
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\StickyNote.Note.resources
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\StickyNote.Resources.resources
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\StickyNote.exe
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\StickyNote.xml
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\StickyNote.pdb
+D:\My Codes\VB\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.exe
+D:\My Codes\VB\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.xml
+D:\My Codes\VB\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.pdb
+D:\My Codes\VB\StickyNote\StickyNote\bin\Debug\StickyNote.exe.manifest
+D:\My Codes\VB\StickyNote\StickyNote\bin\Debug\StickyNote.application
+D:\My Codes\VB\StickyNote\StickyNote\bin\Debug\StickyNote.exe
+D:\My Codes\VB\StickyNote\StickyNote\bin\Debug\StickyNote.pdb
+D:\My Codes\VB\StickyNote\StickyNote\bin\Debug\StickyNote.xml
+D:\My Codes\VB\StickyNote\StickyNote\obj\x86\Debug\StickyNote.Resources.resources
+D:\My Codes\VB\StickyNote\StickyNote\obj\x86\Debug\StickyNote.Note.resources
+D:\My Codes\VB\StickyNote\StickyNote\obj\x86\Debug\StickyNote.exe.manifest
+D:\My Codes\VB\StickyNote\StickyNote\obj\x86\Debug\StickyNote.application
+D:\My Codes\VB\StickyNote\StickyNote\obj\x86\Debug\StickyNote.exe
+D:\My Codes\VB\StickyNote\StickyNote\obj\x86\Debug\StickyNote.xml
+D:\My Codes\VB\StickyNote\StickyNote\obj\x86\Debug\StickyNote.pdb
+D:\My Codes\VB\StickyNote\StickyNote\obj\x86\Debug\StickyNote.vbproj.GenerateResource.Cache
+D:\My Codes\VB\StickyNote\StickyNote\obj\x86\Debug\StickyNote.Main.resources

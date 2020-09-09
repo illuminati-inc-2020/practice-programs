@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: glaux - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Malik\LOCALS~1\Temp\RSP415.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/glaux.pdb" /debug /machine:I386 /out:"Debug/glaux.exe" /pdbtype:sept 
+".\Debug\glaux.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Malik\LOCALS~1\Temp\RSP415.tmp"
+<h3>Output Window</h3>
+Linking...
+glaux.obj : error LNK2001: unresolved external symbol _gluPerspective@32
+glaux.obj : error LNK2001: unresolved external symbol __imp__glLoadIdentity@0
+glaux.obj : error LNK2001: unresolved external symbol __imp__glMatrixMode@4
+glaux.obj : error LNK2001: unresolved external symbol __imp__glViewport@16
+glaux.obj : error LNK2001: unresolved external symbol __imp__glHint@8
+glaux.obj : error LNK2001: unresolved external symbol __imp__glDepthFunc@4
+glaux.obj : error LNK2001: unresolved external symbol __imp__glEnable@4
+glaux.obj : error LNK2001: unresolved external symbol __imp__glClearDepth@8
+glaux.obj : error LNK2001: unresolved external symbol __imp__glClearColor@16
+glaux.obj : error LNK2001: unresolved external symbol __imp__glShadeModel@4
+glaux.obj : error LNK2001: unresolved external symbol __imp__glClear@4
+glaux.obj : error LNK2001: unresolved external symbol __imp__wglDeleteContext@4
+glaux.obj : error LNK2001: unresolved external symbol __imp__wglMakeCurrent@8
+glaux.obj : error LNK2001: unresolved external symbol __imp__wglCreateContext@4
+LIBCD.lib(crt0.obj) : error LNK2001: unresolved external symbol _main
+Debug/glaux.exe : fatal error LNK1120: 15 unresolved externals
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+glaux.exe - 16 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

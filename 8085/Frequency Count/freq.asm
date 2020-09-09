@@ -1,0 +1,14 @@
+	LDA 00A0H
+	MOV C,A		;C=Number of data
+	LDA 00A1H	;A=Data
+	MVI D,00H	;D=Frequency
+	LXI H,00B0H
+LOOP:	CMP M
+	JNZ ENDIF
+	INR D
+ENDIF:	INX H
+	DCR C
+	JNZ LOOP
+	MOV A,D
+	STA 00A2H
+	HLT

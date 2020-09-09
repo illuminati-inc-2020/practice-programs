@@ -1,0 +1,6 @@
+Line 442: Class RichTextLib.RichTextBox of control TextBox was not a loaded control class.
+Line 449: The property name _ExtentX in TextBox is invalid.
+Line 450: The property name _ExtentY in TextBox is invalid.
+Line 451: The property name _Version in TextBox is invalid.
+Line 453: The property name ScrollBars in TextBox is invalid.
+Line 454: The property name TextRTF in TextBox is invalid.

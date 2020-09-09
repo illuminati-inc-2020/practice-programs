@@ -1,0 +1,4 @@
+www.google.com 74.125.236.80
+www.yahoo.com 209.191.122.70
+www.facebook.com 69.171.224.40
+localhost 127.0.0.1

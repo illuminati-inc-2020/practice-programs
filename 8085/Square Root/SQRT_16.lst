@@ -1,0 +1,27 @@
+0001   0000             ;Square root of a 16 bit number
+0002   0000             ;Input		: 00A0H, 00A1H
+0003   0000             ;Output		: 00B0H
+0004   0000 2A A0 00    	LHLD 00A0H
+0005   0003 0E 00       	MVI C, 00H
+0006   0005 11 01 00    	LXI D, 0001H
+0007   0008 7D          LOOP:	MOV A, L
+0008   0009 93          	SUB E
+0009   000A 6F          	MOV L, A
+0010   000B 7C          	MOV A, H
+0011   000C 9A          	SBB D
+0012   000D 67          	MOV H, A
+0013   000E 13          	INX D
+0014   000F 13          	INX D
+0015   0010 0C          	INR C
+0016   0011 7A          	MOV A, D
+0017   0012 BC          	CMP H
+0018   0013 DA 08 00    	JC LOOP		;if D<H continue
+0019   0016 C2 21 00    	JNZ END		;if D>H break
+0020   0019 7B          	MOV A, E
+0021   001A BD          	CMP L
+0022   001B DA 08 00    	JC LOOP		;if D=H and E<L continue
+0023   001E CA 08 00    	JZ LOOP
+0024   0021 79          END:	MOV A, C
+0025   0022 32 B0 00    	STA 00B0H
+0026   0025 76          	HLT
+Number of errors = 0

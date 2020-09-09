@@ -1,0 +1,12 @@
+	LXI H, 00A0H
+	MVI C, 08H
+LOOP:	MOV A, M
+	RAR
+	MOV A, B
+	RAL
+	MOV B, A
+	DCR C
+	INX H
+ 	JNZ LOOP
+	MOV M, B
+	HLT

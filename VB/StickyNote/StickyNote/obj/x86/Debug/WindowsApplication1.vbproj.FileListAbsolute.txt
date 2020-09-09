@@ -1,0 +1,11 @@
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form1.resources
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Resources.resources
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.exe
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.xml
+D:\My Codes\C++\Test Programs\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.pdb
